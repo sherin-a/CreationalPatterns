@@ -1,0 +1,39 @@
+-Avoids costly creation
+-Avoids subclassing
+-Typically doesn't use "new".(One time, after that it is cloned)
+-Often utilizes an interface
+-Usually implemented with a Registry
+Examples: java.lang.Object#clone()
+
+-Clone/Cloneable
+-Avoids keyword "new"
+-Although a copy, each instance is unique
+-Costly construction not handled by client
+-Can still utilize parameters for construction
+-Shallow(Just the immediate properties) vs Deep copy(copies object references as well)
+
+Pitfalls
+-Not clear when to use
+-Used with other patterns
+  -Registry
+-Shallow vs Deep copy
+
+Prototype vs Factory
+
+Prototype
+-Lighter weight construction
+  -Copy constructor or clone
+-Shallow vs Deep
+-Copy of itself
+
+Factory
+-Flexible Objects
+  -Multiple Constructors
+-Concrete Instance
+-Fresh Instance("new" keyword used)
+
+Summary
+-Guarantee unique instance
+-Often refactored in
+-Can help with performance issues
+-Don't always jump to  a Factory

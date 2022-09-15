@@ -1,0 +1,41 @@
+Concepts
+########
+-Factory of Factories
+-Factory of related objects
+-Common interface
+-Defer instantiation to subclasses
+Examples: DocumentBuilder, Frameworks(usually used in Frameworks and not standard java api)
+
+-Group similar Factories together
+-Factory is responsible for lifecycle
+-Common interface
+-Parameterized create method
+-Build using composition
+-Heavy abstraction
+-Framework pattern
+
+UseCases: CreditCard Generation, different database types
+
+Pitfalls:
+-Complexity
+-Runtime switch
+-Pattern within a Pattern
+-Problem specific(not applicable to most use cases like Singleton)
+-Starts as a Factory then refactored into an Abstract factory
+
+Factory vs AbstractFactory
+##########################
+
+Factory
+#######
+-Returns various instances
+ -Multiple constructors
+-Interface driven
+-Adaptable to environment more easily
+
+AbstractFactory
+###############
+-Implemented with a Factory
+-Hides the Factory
+-Abstracts Environment
+-Built through composition

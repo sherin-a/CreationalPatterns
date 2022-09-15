@@ -1,0 +1,33 @@
+- Most heavily used design pattern
+- Only one instance created
+- Guarantees control of a resource
+- Lazily loaded
+Examples: Runtime, Spring Beans, Graphic Managers
+
+- Class is responsible for lifecycle
+- Static in nature(not implemented using static class since static can't be thread safe)
+- Needs to thread safe
+- private instance, private constructor
+- No parameters required for construction(if you do, it's typically a factory pattern)
+
+Pitfalls
+
+- Often overused
+- Difficult to unit test(private constructor, no interface)
+- If not careful, not thread safe
+- Confused for factory
+- java.util.Calendar is NOT Singleton
+    -Prototype pattern which returns unique instance for each getInstance() call
+
+Singleton vs Factory
+
+Singleton
+- Returns same instance
+   - One constructor method - no args
+- No interface
+
+Factory
+- Returns various instances
+  - Multiple constructors
+- Interface driven
+- Adaptable to environment more easily

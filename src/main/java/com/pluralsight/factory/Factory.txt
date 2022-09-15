@@ -1,0 +1,41 @@
+Concepts
+########
+
+-Doesn't expose instantiation logic
+-Defer to subclass
+-Common Interface
+-Specified by architecture, implemented by user
+Examples: Calendar, ResourceBundle, NumberFormat
+
+-Factory is responsible for lifecycle
+-Common interface
+-Concrete classes
+-Parameterized create method
+-Parameter driven
+-Solves complex creation
+-A little complex
+-Opposite of a Singleton
+
+Pitfalls:
+-Complexity
+-Creation in subclass
+-Not refactored into, designed first
+
+Singleton Vs Factory
+####################
+
+Singleton
+#########
+
+-Returns same instance
+  - One constructor method - no args
+-No interface
+-No subclasses
+
+Factory
+#######
+-Returns various instances
+  -Multiple constructors
+-Interface drives
+-Subclasses
+-Adaptable to environment more easily
